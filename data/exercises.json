@@ -1,0 +1,290 @@
+[
+  {
+    "id": "bench-press",
+    "name": "Développé couché",
+    "muscle": "pectoraux",
+    "secondaryMuscles": ["triceps", "épaules"],
+    "description": "Allongé sur un banc plat, descendez la barre jusqu'à la poitrine puis poussez vers le haut en contractant les pectoraux. Gardez les pieds au sol et les omoplates serrées.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><line x1='20' y1='70' x2='80' y2='70' stroke='#555' stroke-width='2'/><circle cx='30' cy='62' r='5' fill='#888'/><line x1='30' y1='67' x2='30' y2='58' stroke='#888' stroke-width='2'/><ellipse cx='38' cy='60' rx='8' ry='4' fill='#0A84FF' opacity='0.8'/><line x1='30' y1='60' x2='30' y2='52' stroke='#888' stroke-width='2'/><line x1='30' y1='52' x2='20' y2='45' stroke='#888' stroke-width='2'/><line x1='30' y1='52' x2='40' y2='45' stroke='#888' stroke-width='2'/><rect x='15' y='43' width='30' height='3' rx='1' fill='#aaa'/><line x1='30' y1='67' x2='25' y2='75' stroke='#888' stroke-width='2'/><line x1='30' y1='67' x2='35' y2='75' stroke='#888' stroke-width='2'/><text x='50' y='90' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Pectoraux</text></svg>"
+  },
+  {
+    "id": "incline-bench-press",
+    "name": "Développé incliné",
+    "muscle": "pectoraux",
+    "secondaryMuscles": ["triceps", "épaules"],
+    "description": "Sur un banc incliné à 30-45°, descendez la barre vers le haut de la poitrine puis poussez. Cible davantage la partie supérieure des pectoraux.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><line x1='25' y1='75' x2='55' y2='55' stroke='#555' stroke-width='2'/><circle cx='35' cy='52' r='5' fill='#888'/><ellipse cx='42' cy='55' rx='7' ry='4' fill='#0A84FF' opacity='0.8'/><line x1='38' y1='56' x2='48' y2='62' stroke='#888' stroke-width='2'/><line x1='38' y1='56' x2='35' y2='48' stroke='#888' stroke-width='2'/><line x1='35' y1='48' x2='25' y2='40' stroke='#888' stroke-width='2'/><line x1='35' y1='48' x2='45' y2='40' stroke='#888' stroke-width='2'/><rect x='20' y='38' width='30' height='3' rx='1' fill='#aaa'/><line x1='48' y1='62' x2='43' y2='72' stroke='#888' stroke-width='2'/><line x1='48' y1='62' x2='53' y2='72' stroke='#888' stroke-width='2'/><text x='50' y='90' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Haut pectoraux</text></svg>"
+  },
+  {
+    "id": "dumbbell-fly",
+    "name": "Écarté couché",
+    "muscle": "pectoraux",
+    "secondaryMuscles": ["épaules"],
+    "description": "Allongé sur un banc, bras tendus au-dessus de la poitrine avec des haltères, ouvrez les bras en arc de cercle puis revenez. Gardez une légère flexion des coudes.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><line x1='20' y1='65' x2='80' y2='65' stroke='#555' stroke-width='2'/><circle cx='50' cy='58' r='5' fill='#888'/><ellipse cx='50' cy='63' rx='9' ry='4' fill='#0A84FF' opacity='0.8'/><line x1='50' y1='63' x2='50' y2='55' stroke='#888' stroke-width='2'/><line x1='50' y1='55' x2='30' y2='48' stroke='#888' stroke-width='2'/><line x1='50' y1='55' x2='70' y2='48' stroke='#888' stroke-width='2'/><circle cx='28' cy='47' r='3' fill='#aaa'/><circle cx='72' cy='47' r='3' fill='#aaa'/><path d='M35 50 Q50 38 65 50' stroke='#0A84FF' stroke-width='1' fill='none' stroke-dasharray='2,2'/><line x1='50' y1='63' x2='45' y2='73' stroke='#888' stroke-width='2'/><line x1='50' y1='63' x2='55' y2='73' stroke='#888' stroke-width='2'/><text x='50' y='90' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Pectoraux</text></svg>"
+  },
+  {
+    "id": "pec-deck",
+    "name": "Pec deck",
+    "muscle": "pectoraux",
+    "secondaryMuscles": ["épaules"],
+    "description": "Assis sur la machine, ramenez les bras devant vous en serrant les pectoraux. Contrôlez le retour lentement sans laisser les poids retomber.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><rect x='42' y='40' width='16' height='40' rx='2' fill='#333'/><circle cx='50' cy='38' r='5' fill='#888'/><ellipse cx='50' cy='48' rx='8' ry='4' fill='#0A84FF' opacity='0.8'/><line x1='50' y1='43' x2='50' y2='60' stroke='#888' stroke-width='2'/><line x1='50' y1='48' x2='35' y2='42' stroke='#888' stroke-width='2'/><line x1='50' y1='48' x2='65' y2='42' stroke='#888' stroke-width='2'/><path d='M35 42 Q50 35 65 42' stroke='#0A84FF' stroke-width='1.5' fill='none'/><line x1='35' y1='42' x2='30' y2='35' stroke='#555' stroke-width='2'/><line x1='65' y1='42' x2='70' y2='35' stroke='#555' stroke-width='2'/><line x1='50' y1='60' x2='45' y2='72' stroke='#888' stroke-width='2'/><line x1='50' y1='60' x2='55' y2='72' stroke='#888' stroke-width='2'/><text x='50' y='90' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Pectoraux</text></svg>"
+  },
+  {
+    "id": "chest-dips",
+    "name": "Dips pecs",
+    "muscle": "pectoraux",
+    "secondaryMuscles": ["triceps", "épaules"],
+    "description": "Aux barres parallèles, penchez le buste légèrement vers l'avant et descendez jusqu'à ce que les bras soient à 90°. Poussez en contractant les pectoraux.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><line x1='30' y1='35' x2='30' y2='75' stroke='#555' stroke-width='3'/><line x1='70' y1='35' x2='70' y2='75' stroke='#555' stroke-width='3'/><circle cx='50' cy='30' r='5' fill='#888'/><ellipse cx='50' cy='40' rx='8' ry='4' fill='#0A84FF' opacity='0.8'/><line x1='50' y1='35' x2='50' y2='55' stroke='#888' stroke-width='2'/><line x1='50' y1='40' x2='32' y2='38' stroke='#888' stroke-width='2'/><line x1='50' y1='40' x2='68' y2='38' stroke='#888' stroke-width='2'/><line x1='50' y1='55' x2='45' y2='68' stroke='#888' stroke-width='2'/><line x1='50' y1='55' x2='55' y2='68' stroke='#888' stroke-width='2'/><line x1='45' y1='68' x2='43' y2='75' stroke='#888' stroke-width='2'/><line x1='55' y1='68' x2='57' y2='75' stroke='#888' stroke-width='2'/><text x='50' y='90' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Pectoraux</text></svg>"
+  },
+  {
+    "id": "push-ups",
+    "name": "Pompes",
+    "muscle": "pectoraux",
+    "secondaryMuscles": ["triceps", "épaules", "abdos"],
+    "description": "En appui sur les mains et les pieds, descendez le corps en gardant le dos droit puis poussez. Exercice au poids du corps complet pour les pectoraux.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='25' cy='45' r='4' fill='#888'/><ellipse cx='33' cy='48' rx='7' ry='3' fill='#0A84FF' opacity='0.8'/><line x1='28' y1='48' x2='65' y2='52' stroke='#888' stroke-width='2'/><line x1='28' y1='48' x2='22' y2='58' stroke='#888' stroke-width='2'/><line x1='22' y1='58' x2='22' y2='65' stroke='#888' stroke-width='2'/><line x1='65' y1='52' x2='72' y2='60' stroke='#888' stroke-width='2'/><line x1='72' y1='60' x2='78' y2='60' stroke='#888' stroke-width='2'/><line x1='22' y1='65' x2='22' y2='68' stroke='#888' stroke-width='1.5'/><text x='50' y='82' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Pectoraux + Triceps</text></svg>"
+  },
+  {
+    "id": "pull-ups",
+    "name": "Tractions",
+    "muscle": "dos",
+    "secondaryMuscles": ["biceps", "épaules"],
+    "description": "Suspendez-vous à une barre, paumes vers l'avant, et tirez-vous vers le haut jusqu'à ce que le menton dépasse la barre. Redescendez lentement.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><line x1='20' y1='18' x2='80' y2='18' stroke='#aaa' stroke-width='3'/><circle cx='50' cy='28' r='5' fill='#888'/><rect x='42' y='33' width='16' height='12' rx='2' fill='#0A84FF' opacity='0.7'/><line x1='50' y1='33' x2='50' y2='55' stroke='#888' stroke-width='2'/><line x1='50' y1='36' x2='35' y2='22' stroke='#888' stroke-width='2'/><line x1='50' y1='36' x2='65' y2='22' stroke='#888' stroke-width='2'/><line x1='50' y1='55' x2='45' y2='70' stroke='#888' stroke-width='2'/><line x1='50' y1='55' x2='55' y2='70' stroke='#888' stroke-width='2'/><text x='50' y='88' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Dos + Biceps</text></svg>"
+  },
+  {
+    "id": "barbell-row",
+    "name": "Rowing barre",
+    "muscle": "dos",
+    "secondaryMuscles": ["biceps", "épaules"],
+    "description": "Penché en avant à 45°, tirez la barre vers le nombril en serrant les omoplates. Gardez le dos droit et contrôlez la descente.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='35' cy='30' r='5' fill='#888'/><rect x='37' y='33' width='14' height='10' rx='2' fill='#0A84FF' opacity='0.7'/><line x1='38' y1='35' x2='60' y2='50' stroke='#888' stroke-width='2'/><line x1='38' y1='38' x2='30' y2='52' stroke='#888' stroke-width='2'/><line x1='30' y1='52' x2='35' y2='55' stroke='#888' stroke-width='2'/><rect x='30' y='54' width='20' height='3' rx='1' fill='#aaa'/><line x1='60' y1='50' x2='52' y2='68' stroke='#888' stroke-width='2'/><line x1='60' y1='50' x2='68' y2='68' stroke='#888' stroke-width='2'/><text x='50' y='88' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Dos</text></svg>"
+  },
+  {
+    "id": "dumbbell-row",
+    "name": "Rowing haltère",
+    "muscle": "dos",
+    "secondaryMuscles": ["biceps"],
+    "description": "Un genou et une main sur un banc, tirez l'haltère vers la hanche avec l'autre bras. Serrez l'omoplate en haut du mouvement.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><line x1='25' y1='55' x2='75' y2='55' stroke='#555' stroke-width='2'/><circle cx='40' cy='38' r='5' fill='#888'/><rect x='42' y='40' width='12' height='8' rx='2' fill='#0A84FF' opacity='0.7'/><line x1='42' y1='42' x2='62' y2='50' stroke='#888' stroke-width='2'/><line x1='42' y1='45' x2='35' y2='55' stroke='#888' stroke-width='2'/><line x1='42' y1='45' x2='48' y2='38' stroke='#888' stroke-width='2'/><circle cx='49' cy='36' r='3' fill='#aaa'/><line x1='62' y1='50' x2='55' y2='55' stroke='#888' stroke-width='2'/><line x1='62' y1='50' x2='68' y2='55' stroke='#888' stroke-width='2'/><text x='50' y='78' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Dos</text></svg>"
+  },
+  {
+    "id": "lat-pulldown",
+    "name": "Tirage vertical",
+    "muscle": "dos",
+    "secondaryMuscles": ["biceps"],
+    "description": "Assis à la machine, tirez la barre vers le haut de la poitrine en contractant les dorsaux. Gardez le buste légèrement incliné en arrière.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><line x1='20' y1='20' x2='80' y2='20' stroke='#aaa' stroke-width='2'/><line x1='50' y1='20' x2='50' y2='25' stroke='#aaa' stroke-width='2'/><rect x='35' y='23' width='30' height='3' rx='1' fill='#aaa'/><circle cx='50' cy='35' r='5' fill='#888'/><rect x='42' y='40' width='16' height='10' rx='2' fill='#0A84FF' opacity='0.7'/><line x1='50' y1='40' x2='50' y2='58' stroke='#888' stroke-width='2'/><line x1='50' y1='43' x2='37' y2='28' stroke='#888' stroke-width='2'/><line x1='50' y1='43' x2='63' y2='28' stroke='#888' stroke-width='2'/><line x1='50' y1='58' x2='44' y2='70' stroke='#888' stroke-width='2'/><line x1='50' y1='58' x2='56' y2='70' stroke='#888' stroke-width='2'/><text x='50' y='88' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Dorsaux</text></svg>"
+  },
+  {
+    "id": "seated-cable-row",
+    "name": "Tirage horizontal",
+    "muscle": "dos",
+    "secondaryMuscles": ["biceps", "épaules"],
+    "description": "Assis face à la poulie basse, tirez la poignée vers le ventre en serrant les omoplates. Gardez le dos droit, ne vous penchez pas en arrière.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><rect x='10' y='30' width='8' height='40' rx='2' fill='#555'/><circle cx='55' cy='38' r='5' fill='#888'/><rect x='47' y='43' width='16' height='10' rx='2' fill='#0A84FF' opacity='0.7'/><line x1='55' y1='43' x2='55' y2='60' stroke='#888' stroke-width='2'/><line x1='55' y1='48' x2='42' y2='45' stroke='#888' stroke-width='2'/><line x1='42' y1='45' x2='18' y2='50' stroke='#666' stroke-width='1' stroke-dasharray='3,2'/><line x1='55' y1='60' x2='48' y2='72' stroke='#888' stroke-width='2'/><line x1='55' y1='60' x2='62' y2='72' stroke='#888' stroke-width='2'/><text x='55' y='88' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Dos</text></svg>"
+  },
+  {
+    "id": "deadlift",
+    "name": "Soulevé de terre",
+    "muscle": "dos",
+    "secondaryMuscles": ["jambes", "abdos"],
+    "description": "Pieds largeur épaules, saisissez la barre au sol et levez-vous en poussant sur les jambes et en redressant le dos. Gardez la barre proche du corps.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='50' cy='22' r='5' fill='#888'/><rect x='43' y='27' width='14' height='12' rx='2' fill='#0A84FF' opacity='0.7'/><line x1='50' y1='27' x2='50' y2='50' stroke='#888' stroke-width='2'/><line x1='50' y1='35' x2='42' y2='55' stroke='#888' stroke-width='2'/><line x1='50' y1='35' x2='58' y2='55' stroke='#888' stroke-width='2'/><line x1='50' y1='50' x2='42' y2='65' stroke='#888' stroke-width='2'/><line x1='50' y1='50' x2='58' y2='65' stroke='#888' stroke-width='2'/><ellipse cx='42' cy='58' rx='3' ry='5' fill='#0A84FF' opacity='0.5'/><ellipse cx='58' cy='58' rx='3' ry='5' fill='#0A84FF' opacity='0.5'/><rect x='32' y='66' width='36' height='3' rx='1' fill='#aaa'/><text x='50' y='88' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Dos + Jambes</text></svg>"
+  },
+  {
+    "id": "overhead-press",
+    "name": "Développé militaire",
+    "muscle": "épaules",
+    "secondaryMuscles": ["triceps"],
+    "description": "Debout, poussez la barre au-dessus de la tête en tendant les bras. Gardez les abdos gainés et ne cambrez pas excessivement le dos.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='50' cy='22' r='5' fill='#888'/><circle cx='42' cy='30' r='4' fill='#0A84FF' opacity='0.8'/><circle cx='58' cy='30' r='4' fill='#0A84FF' opacity='0.8'/><line x1='50' y1='27' x2='50' y2='50' stroke='#888' stroke-width='2'/><line x1='50' y1='32' x2='38' y2='18' stroke='#888' stroke-width='2'/><line x1='50' y1='32' x2='62' y2='18' stroke='#888' stroke-width='2'/><rect x='32' y='15' width='36' height='3' rx='1' fill='#aaa'/><line x1='50' y1='50' x2='44' y2='68' stroke='#888' stroke-width='2'/><line x1='50' y1='50' x2='56' y2='68' stroke='#888' stroke-width='2'/><text x='50' y='85' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Épaules</text></svg>"
+  },
+  {
+    "id": "lateral-raises",
+    "name": "Élévations latérales",
+    "muscle": "épaules",
+    "secondaryMuscles": [],
+    "description": "Debout avec des haltères, montez les bras sur les côtés jusqu'à l'horizontale. Gardez une légère flexion des coudes et contrôlez la descente.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='50' cy='22' r='5' fill='#888'/><circle cx='42' cy='30' r='4' fill='#0A84FF' opacity='0.8'/><circle cx='58' cy='30' r='4' fill='#0A84FF' opacity='0.8'/><line x1='50' y1='27' x2='50' y2='50' stroke='#888' stroke-width='2'/><line x1='50' y1='32' x2='25' y2='32' stroke='#888' stroke-width='2'/><line x1='50' y1='32' x2='75' y2='32' stroke='#888' stroke-width='2'/><circle cx='23' cy='32' r='3' fill='#aaa'/><circle cx='77' cy='32' r='3' fill='#aaa'/><line x1='50' y1='50' x2='44' y2='68' stroke='#888' stroke-width='2'/><line x1='50' y1='50' x2='56' y2='68' stroke='#888' stroke-width='2'/><text x='50' y='85' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Deltoïdes</text></svg>"
+  },
+  {
+    "id": "front-raises",
+    "name": "Élévations frontales",
+    "muscle": "épaules",
+    "secondaryMuscles": ["pectoraux"],
+    "description": "Debout, montez un haltère devant vous bras tendu jusqu'à l'horizontale. Alternez les bras ou faites les deux en même temps.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='55' cy='25' r='5' fill='#888'/><circle cx='48' cy='33' r='4' fill='#0A84FF' opacity='0.8'/><line x1='55' y1='30' x2='55' y2='52' stroke='#888' stroke-width='2'/><line x1='55' y1='35' x2='35' y2='28' stroke='#888' stroke-width='2'/><circle cx='33' cy='27' r='3' fill='#aaa'/><line x1='55' y1='35' x2='65' y2='48' stroke='#888' stroke-width='2'/><line x1='55' y1='52' x2='49' y2='70' stroke='#888' stroke-width='2'/><line x1='55' y1='52' x2='61' y2='70' stroke='#888' stroke-width='2'/><text x='50' y='88' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Deltoïde avant</text></svg>"
+  },
+  {
+    "id": "reverse-fly",
+    "name": "Oiseau",
+    "muscle": "épaules",
+    "secondaryMuscles": ["dos"],
+    "description": "Penché en avant, écartez les bras sur les côtés avec des haltères en serrant les omoplates. Cible l'arrière des épaules.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='50' cy='35' r='5' fill='#888'/><circle cx='44' cy='42' r='3' fill='#0A84FF' opacity='0.8'/><circle cx='56' cy='42' r='3' fill='#0A84FF' opacity='0.8'/><line x1='50' y1='40' x2='58' y2='55' stroke='#888' stroke-width='2'/><line x1='50' y1='43' x2='28' y2='35' stroke='#888' stroke-width='2'/><line x1='50' y1='43' x2='72' y2='35' stroke='#888' stroke-width='2'/><circle cx='26' cy='34' r='2.5' fill='#aaa'/><circle cx='74' cy='34' r='2.5' fill='#aaa'/><line x1='58' y1='55' x2='52' y2='70' stroke='#888' stroke-width='2'/><line x1='58' y1='55' x2='64' y2='70' stroke='#888' stroke-width='2'/><text x='50' y='88' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Deltoïde post.</text></svg>"
+  },
+  {
+    "id": "face-pull",
+    "name": "Face pull",
+    "muscle": "épaules",
+    "secondaryMuscles": ["dos"],
+    "description": "À la poulie haute avec une corde, tirez vers le visage en écartant les mains. Excellent pour la santé des épaules et la posture.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><rect x='10' y='15' width='8' height='50' rx='2' fill='#555'/><circle cx='55' cy='30' r='5' fill='#888'/><circle cx='48' cy='37' r='3.5' fill='#0A84FF' opacity='0.8'/><circle cx='62' cy='37' r='3.5' fill='#0A84FF' opacity='0.8'/><line x1='55' y1='35' x2='55' y2='55' stroke='#888' stroke-width='2'/><line x1='55' y1='38' x2='42' y2='32' stroke='#888' stroke-width='2'/><line x1='55' y1='38' x2='68' y2='32' stroke='#888' stroke-width='2'/><line x1='42' y1='32' x2='18' y2='28' stroke='#666' stroke-width='1' stroke-dasharray='3,2'/><line x1='55' y1='55' x2='49' y2='70' stroke='#888' stroke-width='2'/><line x1='55' y1='55' x2='61' y2='70' stroke='#888' stroke-width='2'/><text x='55' y='88' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Épaules post.</text></svg>"
+  },
+  {
+    "id": "shrugs",
+    "name": "Shrug",
+    "muscle": "épaules",
+    "secondaryMuscles": [],
+    "description": "Debout avec des haltères ou une barre, haussez les épaules le plus haut possible en contractant les trapèzes. Maintenez 1-2 secondes en haut.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='50' cy='22' r='5' fill='#888'/><ellipse cx='44' cy='28' rx='5' ry='6' fill='#0A84FF' opacity='0.8'/><ellipse cx='56' cy='28' rx='5' ry='6' fill='#0A84FF' opacity='0.8'/><line x1='50' y1='27' x2='50' y2='50' stroke='#888' stroke-width='2'/><line x1='50' y1='32' x2='38' y2='48' stroke='#888' stroke-width='2'/><line x1='50' y1='32' x2='62' y2='48' stroke='#888' stroke-width='2'/><circle cx='36' cy='50' r='3' fill='#aaa'/><circle cx='64' cy='50' r='3' fill='#aaa'/><line x1='50' y1='50' x2='44' y2='68' stroke='#888' stroke-width='2'/><line x1='50' y1='50' x2='56' y2='68' stroke='#888' stroke-width='2'/><path d='M44 24 L50 18 L56 24' stroke='#0A84FF' stroke-width='1.5' fill='none'/><text x='50' y='85' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Trapèzes</text></svg>"
+  },
+  {
+    "id": "barbell-curl",
+    "name": "Curl barre",
+    "muscle": "biceps",
+    "secondaryMuscles": [],
+    "description": "Debout, fléchissez les bras en montant la barre vers les épaules. Gardez les coudes collés au corps et ne balancez pas le dos.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='50' cy='20' r='5' fill='#888'/><line x1='50' y1='25' x2='50' y2='50' stroke='#888' stroke-width='2'/><ellipse cx='42' cy='36' rx='3' ry='5' fill='#0A84FF' opacity='0.8'/><ellipse cx='58' cy='36' rx='3' ry='5' fill='#0A84FF' opacity='0.8'/><line x1='50' y1='30' x2='42' y2='40' stroke='#888' stroke-width='2'/><line x1='42' y1='40' x2='42' y2='30' stroke='#888' stroke-width='2'/><line x1='50' y1='30' x2='58' y2='40' stroke='#888' stroke-width='2'/><line x1='58' y1='40' x2='58' y2='30' stroke='#888' stroke-width='2'/><rect x='38' y='28' width='24' height='3' rx='1' fill='#aaa'/><line x1='50' y1='50' x2='44' y2='68' stroke='#888' stroke-width='2'/><line x1='50' y1='50' x2='56' y2='68' stroke='#888' stroke-width='2'/><text x='50' y='85' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Biceps</text></svg>"
+  },
+  {
+    "id": "dumbbell-curl",
+    "name": "Curl haltères",
+    "muscle": "biceps",
+    "secondaryMuscles": [],
+    "description": "Debout ou assis, fléchissez un bras à la fois en montant l'haltère vers l'épaule avec rotation du poignet. Alternez les bras.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='50' cy='20' r='5' fill='#888'/><line x1='50' y1='25' x2='50' y2='50' stroke='#888' stroke-width='2'/><ellipse cx='42' cy='35' rx='3' ry='5' fill='#0A84FF' opacity='0.8'/><line x1='50' y1='30' x2='42' y2='40' stroke='#888' stroke-width='2'/><line x1='42' y1='40' x2='40' y2='30' stroke='#888' stroke-width='2'/><circle cx='39' cy='28' r='3' fill='#aaa'/><line x1='50' y1='30' x2='60' y2='48' stroke='#888' stroke-width='2'/><line x1='50' y1='50' x2='44' y2='68' stroke='#888' stroke-width='2'/><line x1='50' y1='50' x2='56' y2='68' stroke='#888' stroke-width='2'/><text x='50' y='85' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Biceps</text></svg>"
+  },
+  {
+    "id": "hammer-curl",
+    "name": "Curl marteau",
+    "muscle": "biceps",
+    "secondaryMuscles": [],
+    "description": "Comme le curl haltères mais avec les paumes face à face (prise neutre). Travaille aussi le brachial et l'avant-bras.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='50' cy='20' r='5' fill='#888'/><line x1='50' y1='25' x2='50' y2='50' stroke='#888' stroke-width='2'/><ellipse cx='42' cy='36' rx='3' ry='5' fill='#0A84FF' opacity='0.8'/><ellipse cx='58' cy='36' rx='3' ry='5' fill='#0A84FF' opacity='0.8'/><line x1='50' y1='30' x2='42' y2='40' stroke='#888' stroke-width='2'/><line x1='42' y1='40' x2='42' y2='32' stroke='#888' stroke-width='2'/><line x1='50' y1='30' x2='58' y2='40' stroke='#888' stroke-width='2'/><line x1='58' y1='40' x2='58' y2='32' stroke='#888' stroke-width='2'/><rect x='40' y='28' width='4' height='6' rx='1' fill='#aaa'/><rect x='56' y='28' width='4' height='6' rx='1' fill='#aaa'/><line x1='50' y1='50' x2='44' y2='68' stroke='#888' stroke-width='2'/><line x1='50' y1='50' x2='56' y2='68' stroke='#888' stroke-width='2'/><text x='50' y='85' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Biceps + Brachial</text></svg>"
+  },
+  {
+    "id": "cable-tricep-extension",
+    "name": "Extensions poulie",
+    "muscle": "triceps",
+    "secondaryMuscles": [],
+    "description": "Face à la poulie haute, poussez la barre ou la corde vers le bas en tendant les bras. Gardez les coudes fixes le long du corps.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><rect x='45' y='10' width='10' height='15' rx='2' fill='#555'/><line x1='50' y1='25' x2='50' y2='35' stroke='#666' stroke-width='1'/><circle cx='50' cy='30' r='5' fill='#888'/><line x1='50' y1='35' x2='50' y2='55' stroke='#888' stroke-width='2'/><ellipse cx='43' cy='42' rx='2.5' ry='5' fill='#0A84FF' opacity='0.8'/><ellipse cx='57' cy='42' rx='2.5' ry='5' fill='#0A84FF' opacity='0.8'/><line x1='50' y1='38' x2='43' y2='42' stroke='#888' stroke-width='2'/><line x1='43' y1='42' x2='43' y2='52' stroke='#888' stroke-width='2'/><line x1='50' y1='38' x2='57' y2='42' stroke='#888' stroke-width='2'/><line x1='57' y1='42' x2='57' y2='52' stroke='#888' stroke-width='2'/><line x1='50' y1='55' x2='44' y2='70' stroke='#888' stroke-width='2'/><line x1='50' y1='55' x2='56' y2='70' stroke='#888' stroke-width='2'/><text x='50' y='88' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Triceps</text></svg>"
+  },
+  {
+    "id": "skull-crushers",
+    "name": "Barre au front",
+    "muscle": "triceps",
+    "secondaryMuscles": [],
+    "description": "Allongé sur un banc, descendez la barre vers le front en pliant les coudes puis tendez les bras. Gardez les coudes pointés vers le plafond.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><line x1='20' y1='60' x2='80' y2='60' stroke='#555' stroke-width='2'/><circle cx='35' cy='53' r='5' fill='#888'/><line x1='35' y1='58' x2='60' y2='58' stroke='#888' stroke-width='2'/><ellipse cx='42' cy='50' rx='2.5' ry='5' fill='#0A84FF' opacity='0.8'/><line x1='40' y1='55' x2='40' y2='48' stroke='#888' stroke-width='2'/><line x1='40' y1='48' x2='35' y2='44' stroke='#888' stroke-width='2'/><rect x='30' y='42' width='12' height='3' rx='1' fill='#aaa'/><line x1='60' y1='58' x2='55' y2='68' stroke='#888' stroke-width='2'/><line x1='60' y1='58' x2='65' y2='68' stroke='#888' stroke-width='2'/><text x='50' y='85' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Triceps</text></svg>"
+  },
+  {
+    "id": "tricep-dips",
+    "name": "Dips triceps",
+    "muscle": "triceps",
+    "secondaryMuscles": ["pectoraux", "épaules"],
+    "description": "Aux barres parallèles, corps bien droit et vertical, descendez en pliant les coudes puis poussez. Gardez le buste droit pour cibler les triceps.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><line x1='30' y1='30' x2='30' y2='75' stroke='#555' stroke-width='3'/><line x1='70' y1='30' x2='70' y2='75' stroke='#555' stroke-width='3'/><circle cx='50' cy='28' r='5' fill='#888'/><line x1='50' y1='33' x2='50' y2='55' stroke='#888' stroke-width='2'/><ellipse cx='43' cy='40' rx='2.5' ry='5' fill='#0A84FF' opacity='0.8'/><ellipse cx='57' cy='40' rx='2.5' ry='5' fill='#0A84FF' opacity='0.8'/><line x1='50' y1='36' x2='32' y2='34' stroke='#888' stroke-width='2'/><line x1='50' y1='36' x2='68' y2='34' stroke='#888' stroke-width='2'/><line x1='50' y1='55' x2='50' y2='72' stroke='#888' stroke-width='2'/><line x1='50' y1='72' x2='45' y2='72' stroke='#888' stroke-width='1.5'/><line x1='50' y1='72' x2='55' y2='72' stroke='#888' stroke-width='1.5'/><text x='50' y='88' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Triceps</text></svg>"
+  },
+  {
+    "id": "squat",
+    "name": "Squat",
+    "muscle": "jambes",
+    "secondaryMuscles": ["abdos"],
+    "description": "Barre sur les trapèzes, descendez en pliant les genoux comme pour s'asseoir jusqu'à ce que les cuisses soient parallèles au sol. Poussez pour remonter.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='50' cy='18' r='5' fill='#888'/><rect x='38' y='15' width='24' height='3' rx='1' fill='#aaa'/><line x1='50' y1='23' x2='50' y2='42' stroke='#888' stroke-width='2'/><line x1='50' y1='42' x2='40' y2='55' stroke='#888' stroke-width='2'/><line x1='50' y1='42' x2='60' y2='55' stroke='#888' stroke-width='2'/><ellipse cx='40' cy='50' rx='4' ry='7' fill='#0A84FF' opacity='0.7'/><ellipse cx='60' cy='50' rx='4' ry='7' fill='#0A84FF' opacity='0.7'/><line x1='40' y1='55' x2='38' y2='68' stroke='#888' stroke-width='2'/><line x1='60' y1='55' x2='62' y2='68' stroke='#888' stroke-width='2'/><line x1='38' y1='68' x2='35' y2='72' stroke='#888' stroke-width='2'/><line x1='62' y1='68' x2='65' y2='72' stroke='#888' stroke-width='2'/><text x='50' y='88' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Quadriceps</text></svg>"
+  },
+  {
+    "id": "leg-press",
+    "name": "Presse à cuisses",
+    "muscle": "jambes",
+    "secondaryMuscles": [],
+    "description": "Assis sur la machine, pieds sur la plateforme largeur épaules, poussez pour tendre les jambes sans verrouiller les genoux. Redescendez lentement.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><rect x='55' y='30' width='25' height='35' rx='2' fill='#333' transform='rotate(-30 67 47)'/><circle cx='38' cy='50' r='5' fill='#888'/><line x1='38' y1='55' x2='38' y2='62' stroke='#888' stroke-width='2'/><ellipse cx='45' cy='55' rx='4' ry='6' fill='#0A84FF' opacity='0.7'/><line x1='38' y1='62' x2='50' y2='52' stroke='#888' stroke-width='2'/><line x1='50' y1='52' x2='58' y2='42' stroke='#888' stroke-width='2'/><line x1='38' y1='62' x2='50' y2='58' stroke='#888' stroke-width='2'/><line x1='50' y1='58' x2='58' y2='48' stroke='#888' stroke-width='2'/><text x='50' y='88' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Jambes</text></svg>"
+  },
+  {
+    "id": "lunges",
+    "name": "Fentes",
+    "muscle": "jambes",
+    "secondaryMuscles": ["abdos"],
+    "description": "Un grand pas en avant, descendez le genou arrière vers le sol. La cuisse avant doit être parallèle au sol. Alternez les jambes.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='50' cy='18' r='5' fill='#888'/><line x1='50' y1='23' x2='50' y2='42' stroke='#888' stroke-width='2'/><line x1='50' y1='42' x2='35' y2='52' stroke='#888' stroke-width='2'/><ellipse cx='38' cy='48' rx='4' ry='6' fill='#0A84FF' opacity='0.7'/><line x1='35' y1='52' x2='32' y2='65' stroke='#888' stroke-width='2'/><line x1='32' y1='65' x2='28' y2='68' stroke='#888' stroke-width='2'/><line x1='50' y1='42' x2='62' y2='55' stroke='#888' stroke-width='2'/><ellipse cx='58' cy='50' rx='4' ry='6' fill='#0A84FF' opacity='0.7'/><line x1='62' y1='55' x2='65' y2='68' stroke='#888' stroke-width='2'/><line x1='50' y1='28' x2='42' y2='35' stroke='#888' stroke-width='2'/><line x1='50' y1='28' x2='58' y2='35' stroke='#888' stroke-width='2'/><text x='50' y='85' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Quadriceps</text></svg>"
+  },
+  {
+    "id": "leg-extension",
+    "name": "Leg extension",
+    "muscle": "jambes",
+    "secondaryMuscles": [],
+    "description": "Assis sur la machine, tendez les jambes devant vous en contractant les quadriceps. Redescendez lentement sans lâcher la tension.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><rect x='30' y='40' width='20' height='25' rx='3' fill='#333'/><circle cx='45' cy='38' r='5' fill='#888'/><line x1='45' y1='43' x2='45' y2='55' stroke='#888' stroke-width='2'/><line x1='45' y1='55' x2='60' y2='48' stroke='#888' stroke-width='2'/><line x1='60' y1='48' x2='72' y2='45' stroke='#888' stroke-width='2'/><ellipse cx='55' cy='50' rx='6' ry='3.5' fill='#0A84FF' opacity='0.7'/><line x1='45' y1='50' x2='38' y2='42' stroke='#888' stroke-width='2'/><line x1='45' y1='50' x2='52' y2='42' stroke='#888' stroke-width='2'/><text x='50' y='78' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Quadriceps</text></svg>"
+  },
+  {
+    "id": "leg-curl",
+    "name": "Leg curl",
+    "muscle": "jambes",
+    "secondaryMuscles": [],
+    "description": "Allongé face contre le banc, fléchissez les jambes en ramenant les talons vers les fessiers. Cible les ischio-jambiers.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><line x1='15' y1='55' x2='85' y2='55' stroke='#555' stroke-width='2'/><circle cx='30' cy='48' r='5' fill='#888'/><line x1='33' y1='50' x2='65' y2='52' stroke='#888' stroke-width='2'/><line x1='65' y1='52' x2='72' y2='52' stroke='#888' stroke-width='2'/><line x1='72' y1='52' x2='72' y2='40' stroke='#888' stroke-width='2'/><ellipse cx='70' cy='48' rx='3' ry='6' fill='#0A84FF' opacity='0.7'/><line x1='33' y1='50' x2='28' y2='45' stroke='#888' stroke-width='2'/><line x1='33' y1='50' x2='38' y2='45' stroke='#888' stroke-width='2'/><text x='50' y='78' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Ischio-jambiers</text></svg>"
+  },
+  {
+    "id": "standing-calf-raise",
+    "name": "Mollets debout",
+    "muscle": "jambes",
+    "secondaryMuscles": [],
+    "description": "Debout sur une marche, montez sur la pointe des pieds le plus haut possible puis redescendez lentement. Gardez les jambes tendues.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='50' cy='15' r='5' fill='#888'/><line x1='50' y1='20' x2='50' y2='42' stroke='#888' stroke-width='2'/><line x1='50' y1='42' x2='47' y2='58' stroke='#888' stroke-width='2'/><line x1='50' y1='42' x2='53' y2='58' stroke='#888' stroke-width='2'/><ellipse cx='47' cy='62' rx='3' ry='5' fill='#0A84FF' opacity='0.8'/><ellipse cx='53' cy='62' rx='3' ry='5' fill='#0A84FF' opacity='0.8'/><line x1='47' y1='58' x2='47' y2='68' stroke='#888' stroke-width='2'/><line x1='53' y1='58' x2='53' y2='68' stroke='#888' stroke-width='2'/><rect x='40' y='68' width='20' height='3' rx='1' fill='#555'/><line x1='50' y1='25' x2='42' y2='33' stroke='#888' stroke-width='2'/><line x1='50' y1='25' x2='58' y2='33' stroke='#888' stroke-width='2'/><text x='50' y='85' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Mollets</text></svg>"
+  },
+  {
+    "id": "hip-thrust",
+    "name": "Hip thrust",
+    "muscle": "jambes",
+    "secondaryMuscles": ["abdos"],
+    "description": "Dos appuyé contre un banc, barre sur les hanches, poussez les hanches vers le haut en contractant les fessiers. Redescendez lentement.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><rect x='15' y='45' width='15' height='25' rx='2' fill='#555'/><circle cx='30' cy='43' r='5' fill='#888'/><line x1='30' y1='48' x2='50' y2='42' stroke='#888' stroke-width='2'/><ellipse cx='50' cy='40' rx='8' ry='4' fill='#0A84FF' opacity='0.7'/><rect x='42' y='38' width='16' height='3' rx='1' fill='#aaa'/><line x1='50' y1='42' x2='60' y2='50' stroke='#888' stroke-width='2'/><line x1='60' y1='50' x2='65' y2='60' stroke='#888' stroke-width='2'/><line x1='50' y1='42' x2='55' y2='50' stroke='#888' stroke-width='2'/><line x1='55' y1='50' x2='58' y2='60' stroke='#888' stroke-width='2'/><text x='50' y='82' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Fessiers</text></svg>"
+  },
+  {
+    "id": "crunches",
+    "name": "Crunch",
+    "muscle": "abdos",
+    "secondaryMuscles": [],
+    "description": "Allongé sur le dos, genoux pliés, soulevez les épaules du sol en contractant les abdominaux. Ne tirez pas sur la nuque.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='40' cy='42' r='5' fill='#888'/><line x1='42' y1='46' x2='55' y2='55' stroke='#888' stroke-width='2'/><rect x='44' y='48' width='12' height='8' rx='2' fill='#0A84FF' opacity='0.7'/><line x1='55' y1='55' x2='60' y2='48' stroke='#888' stroke-width='2'/><line x1='60' y1='48' x2='62' y2='55' stroke='#888' stroke-width='2'/><line x1='55' y1='55' x2='65' y2='50' stroke='#888' stroke-width='2'/><line x1='65' y1='50' x2='68' y2='55' stroke='#888' stroke-width='2'/><line x1='42' y1='46' x2='38' y2='38' stroke='#888' stroke-width='2'/><line x1='42' y1='46' x2='48' y2='40' stroke='#888' stroke-width='2'/><text x='50' y='78' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Abdominaux</text></svg>"
+  },
+  {
+    "id": "leg-raises",
+    "name": "Relevé de jambes",
+    "muscle": "abdos",
+    "secondaryMuscles": [],
+    "description": "Allongé ou suspendu, montez les jambes tendues jusqu'à la verticale en contractant le bas des abdos. Redescendez sans toucher le sol.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='30' cy='55' r='5' fill='#888'/><line x1='33' y1='58' x2='45' y2='58' stroke='#888' stroke-width='2'/><rect x='36' y='54' width='10' height='6' rx='2' fill='#0A84FF' opacity='0.7'/><line x1='45' y1='58' x2='55' y2='40' stroke='#888' stroke-width='2'/><line x1='45' y1='58' x2='50' y2='38' stroke='#888' stroke-width='2'/><line x1='33' y1='58' x2='28' y2='52' stroke='#888' stroke-width='2'/><line x1='33' y1='58' x2='38' y2='52' stroke='#888' stroke-width='2'/><path d='M55 40 L50 35' stroke='#0A84FF' stroke-width='1.5' fill='none'/><text x='50' y='80' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Bas abdos</text></svg>"
+  },
+  {
+    "id": "plank",
+    "name": "Planche",
+    "muscle": "abdos",
+    "secondaryMuscles": ["épaules"],
+    "description": "En appui sur les avant-bras et les pieds, maintenez le corps droit comme une planche. Serrez les abdos et ne laissez pas les hanches descendre.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='28' cy='45' r='4' fill='#888'/><line x1='31' y1='48' x2='72' y2='50' stroke='#888' stroke-width='2'/><rect x='40' y='46' width='18' height='5' rx='2' fill='#0A84FF' opacity='0.7'/><line x1='31' y1='48' x2='28' y2='55' stroke='#888' stroke-width='2'/><line x1='28' y1='55' x2='28' y2='58' stroke='#888' stroke-width='1.5'/><line x1='72' y1='50' x2='78' y2='55' stroke='#888' stroke-width='2'/><line x1='78' y1='55' x2='80' y2='55' stroke='#888' stroke-width='1.5'/><text x='50' y='78' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Gainage</text></svg>"
+  },
+  {
+    "id": "russian-twist",
+    "name": "Russian twist",
+    "muscle": "abdos",
+    "secondaryMuscles": [],
+    "description": "Assis au sol, pieds levés, tournez le buste de gauche à droite avec ou sans poids. Excellent pour les obliques.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='50' cy='30' r='5' fill='#888'/><line x1='50' y1='35' x2='50' y2='52' stroke='#888' stroke-width='2'/><rect x='44' y='40' width='12' height='10' rx='2' fill='#0A84FF' opacity='0.7'/><ellipse cx='42' cy='45' rx='3' ry='5' fill='#0A84FF' opacity='0.5'/><ellipse cx='58' cy='45' rx='3' ry='5' fill='#0A84FF' opacity='0.5'/><line x1='50' y1='40' x2='35' y2='38' stroke='#888' stroke-width='2'/><line x1='50' y1='40' x2='62' y2='45' stroke='#888' stroke-width='2'/><line x1='50' y1='52' x2='42' y2='62' stroke='#888' stroke-width='2'/><line x1='50' y1='52' x2='58' y2='62' stroke='#888' stroke-width='2'/><path d='M42 38 Q50 32 58 38' stroke='#0A84FF' stroke-width='1' fill='none' stroke-dasharray='2,2'/><text x='50' y='80' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Obliques</text></svg>"
+  },
+  {
+    "id": "ab-wheel",
+    "name": "Ab wheel",
+    "muscle": "abdos",
+    "secondaryMuscles": ["épaules"],
+    "description": "À genoux, roulez la roue vers l'avant en gardant les abdos contractés, puis revenez. Exercice avancé, ne cambrez pas le dos.",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#1C1C1E' rx='8'/><circle cx='30' cy='42' r='4' fill='#888'/><line x1='33' y1='44' x2='55' y2='52' stroke='#888' stroke-width='2'/><rect x='38' y='44' width='14' height='6' rx='2' fill='#0A84FF' opacity='0.7'/><line x1='33' y1='44' x2='22' y2='38' stroke='#888' stroke-width='2'/><circle cx='20' cy='40' r='5' fill='#555' stroke='#888' stroke-width='1.5'/><line x1='20' y1='40' x2='20' y2='37' stroke='#aaa' stroke-width='1'/><line x1='55' y1='52' x2='52' y2='62' stroke='#888' stroke-width='2'/><line x1='55' y1='52' x2='58' y2='62' stroke='#888' stroke-width='2'/><line x1='52' y1='62' x2='50' y2='62' stroke='#888' stroke-width='1.5'/><line x1='58' y1='62' x2='60' y2='62' stroke='#888' stroke-width='1.5'/><text x='50' y='80' fill='#0A84FF' font-size='7' text-anchor='middle' font-family='sans-serif'>Abdos complet</text></svg>"
+  }
+]

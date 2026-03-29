@@ -1,0 +1,227 @@
+[
+  {
+    "id": "ppl-push-pull-legs",
+    "name": "PPL — Push / Pull / Legs",
+    "description": "Programme classique en 6 jours ciblant poussée, tirage et jambes. Idéal pour maximiser le volume par groupe musculaire avec une fréquence de 2× par semaine.",
+    "level": "intermédiaire",
+    "daysPerWeek": 6,
+    "days": [
+      {
+        "name": "Push A",
+        "exercises": [
+          { "exerciseId": "bench-press", "sets": 4, "reps": 8, "restSeconds": 120 },
+          { "exerciseId": "incline-dumbbell-press", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "lateral-raises", "sets": 3, "reps": 15, "restSeconds": 60 },
+          { "exerciseId": "tricep-pushdown", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "chest-dips", "sets": 3, "reps": 10, "restSeconds": 90 }
+        ]
+      },
+      {
+        "name": "Pull A",
+        "exercises": [
+          { "exerciseId": "pull-ups", "sets": 4, "reps": 8, "restSeconds": 120 },
+          { "exerciseId": "barbell-row", "sets": 4, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "face-pull", "sets": 3, "reps": 15, "restSeconds": 60 },
+          { "exerciseId": "barbell-curl", "sets": 3, "reps": 10, "restSeconds": 60 },
+          { "exerciseId": "hammer-curl", "sets": 3, "reps": 12, "restSeconds": 60 }
+        ]
+      },
+      {
+        "name": "Legs A",
+        "exercises": [
+          { "exerciseId": "squat", "sets": 4, "reps": 8, "restSeconds": 150 },
+          { "exerciseId": "leg-press", "sets": 3, "reps": 12, "restSeconds": 120 },
+          { "exerciseId": "lunges", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "leg-curl", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "calf-raises", "sets": 4, "reps": 15, "restSeconds": 60 }
+        ]
+      },
+      {
+        "name": "Push B",
+        "exercises": [
+          { "exerciseId": "bench-press", "sets": 4, "reps": 8, "restSeconds": 120 },
+          { "exerciseId": "incline-dumbbell-press", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "lateral-raises", "sets": 3, "reps": 15, "restSeconds": 60 },
+          { "exerciseId": "tricep-pushdown", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "chest-dips", "sets": 3, "reps": 10, "restSeconds": 90 }
+        ]
+      },
+      {
+        "name": "Pull B",
+        "exercises": [
+          { "exerciseId": "pull-ups", "sets": 4, "reps": 8, "restSeconds": 120 },
+          { "exerciseId": "barbell-row", "sets": 4, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "face-pull", "sets": 3, "reps": 15, "restSeconds": 60 },
+          { "exerciseId": "barbell-curl", "sets": 3, "reps": 10, "restSeconds": 60 },
+          { "exerciseId": "hammer-curl", "sets": 3, "reps": 12, "restSeconds": 60 }
+        ]
+      },
+      {
+        "name": "Legs B",
+        "exercises": [
+          { "exerciseId": "squat", "sets": 4, "reps": 8, "restSeconds": 150 },
+          { "exerciseId": "leg-press", "sets": 3, "reps": 12, "restSeconds": 120 },
+          { "exerciseId": "lunges", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "leg-curl", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "calf-raises", "sets": 4, "reps": 15, "restSeconds": 60 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "upper-lower",
+    "name": "Upper / Lower",
+    "description": "Programme en 4 jours alternant haut et bas du corps. Bon équilibre entre volume et récupération, parfait pour les intermédiaires.",
+    "level": "intermédiaire",
+    "daysPerWeek": 4,
+    "days": [
+      {
+        "name": "Upper A",
+        "exercises": [
+          { "exerciseId": "bench-press", "sets": 4, "reps": 8, "restSeconds": 120 },
+          { "exerciseId": "barbell-row", "sets": 4, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "overhead-press", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "barbell-curl", "sets": 3, "reps": 10, "restSeconds": 60 },
+          { "exerciseId": "tricep-pushdown", "sets": 3, "reps": 12, "restSeconds": 60 }
+        ]
+      },
+      {
+        "name": "Lower A",
+        "exercises": [
+          { "exerciseId": "squat", "sets": 4, "reps": 8, "restSeconds": 150 },
+          { "exerciseId": "deadlift", "sets": 3, "reps": 6, "restSeconds": 180 },
+          { "exerciseId": "lunges", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "leg-extension", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "calf-raises", "sets": 4, "reps": 15, "restSeconds": 60 }
+        ]
+      },
+      {
+        "name": "Upper B",
+        "exercises": [
+          { "exerciseId": "incline-dumbbell-press", "sets": 4, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "pull-ups", "sets": 4, "reps": 8, "restSeconds": 120 },
+          { "exerciseId": "lateral-raises", "sets": 3, "reps": 15, "restSeconds": 60 },
+          { "exerciseId": "dumbbell-curl", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "chest-dips", "sets": 3, "reps": 10, "restSeconds": 90 }
+        ]
+      },
+      {
+        "name": "Lower B",
+        "exercises": [
+          { "exerciseId": "leg-press", "sets": 4, "reps": 12, "restSeconds": 120 },
+          { "exerciseId": "hip-thrust", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "leg-curl", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "leg-extension", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "calf-raises", "sets": 4, "reps": 15, "restSeconds": 60 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "full-body",
+    "name": "Full Body",
+    "description": "Programme en 3 jours travaillant tout le corps à chaque séance. Idéal pour les débutants : fréquence élevée, volume modéré, et apprentissage de tous les mouvements de base.",
+    "level": "débutant",
+    "daysPerWeek": 3,
+    "days": [
+      {
+        "name": "Jour A",
+        "exercises": [
+          { "exerciseId": "squat", "sets": 3, "reps": 10, "restSeconds": 120 },
+          { "exerciseId": "bench-press", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "barbell-row", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "lateral-raises", "sets": 3, "reps": 15, "restSeconds": 60 },
+          { "exerciseId": "barbell-curl", "sets": 2, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "crunch", "sets": 3, "reps": 15, "restSeconds": 45 }
+        ]
+      },
+      {
+        "name": "Jour B",
+        "exercises": [
+          { "exerciseId": "deadlift", "sets": 3, "reps": 8, "restSeconds": 150 },
+          { "exerciseId": "overhead-press", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "pull-ups", "sets": 3, "reps": 8, "restSeconds": 90 },
+          { "exerciseId": "lunges", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "tricep-pushdown", "sets": 2, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "plank", "sets": 3, "reps": 1, "restSeconds": 45 }
+        ]
+      },
+      {
+        "name": "Jour C",
+        "exercises": [
+          { "exerciseId": "leg-press", "sets": 3, "reps": 12, "restSeconds": 120 },
+          { "exerciseId": "incline-dumbbell-press", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "dumbbell-row", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "dumbbell-curl", "sets": 2, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "chest-dips", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "leg-raises", "sets": 3, "reps": 12, "restSeconds": 45 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bro-split",
+    "name": "Bro Split — 1 muscle par jour",
+    "description": "Programme classique en 5 jours dédiant chaque séance à un groupe musculaire. Volume élevé par muscle, idéal pour les avancés cherchant un maximum de congestion et de détail.",
+    "level": "avancé",
+    "daysPerWeek": 5,
+    "days": [
+      {
+        "name": "Pecs",
+        "exercises": [
+          { "exerciseId": "bench-press", "sets": 4, "reps": 8, "restSeconds": 120 },
+          { "exerciseId": "incline-dumbbell-press", "sets": 4, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "dumbbell-fly", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "pec-deck", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "chest-dips", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "push-ups", "sets": 3, "reps": 15, "restSeconds": 60 }
+        ]
+      },
+      {
+        "name": "Dos",
+        "exercises": [
+          { "exerciseId": "pull-ups", "sets": 4, "reps": 8, "restSeconds": 120 },
+          { "exerciseId": "barbell-row", "sets": 4, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "dumbbell-row", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "lat-pulldown", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "cable-row", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "deadlift", "sets": 3, "reps": 6, "restSeconds": 180 }
+        ]
+      },
+      {
+        "name": "Épaules",
+        "exercises": [
+          { "exerciseId": "overhead-press", "sets": 4, "reps": 8, "restSeconds": 120 },
+          { "exerciseId": "lateral-raises", "sets": 4, "reps": 15, "restSeconds": 60 },
+          { "exerciseId": "front-raises", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "reverse-fly", "sets": 3, "reps": 15, "restSeconds": 60 },
+          { "exerciseId": "face-pull", "sets": 3, "reps": 15, "restSeconds": 60 },
+          { "exerciseId": "barbell-shrug", "sets": 4, "reps": 12, "restSeconds": 60 }
+        ]
+      },
+      {
+        "name": "Bras",
+        "exercises": [
+          { "exerciseId": "barbell-curl", "sets": 3, "reps": 10, "restSeconds": 60 },
+          { "exerciseId": "dumbbell-curl", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "hammer-curl", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "tricep-pushdown", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "skull-crusher", "sets": 3, "reps": 10, "restSeconds": 60 },
+          { "exerciseId": "tricep-dips", "sets": 3, "reps": 10, "restSeconds": 90 }
+        ]
+      },
+      {
+        "name": "Jambes",
+        "exercises": [
+          { "exerciseId": "squat", "sets": 4, "reps": 8, "restSeconds": 150 },
+          { "exerciseId": "leg-press", "sets": 4, "reps": 12, "restSeconds": 120 },
+          { "exerciseId": "lunges", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "leg-extension", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "leg-curl", "sets": 3, "reps": 12, "restSeconds": 60 },
+          { "exerciseId": "hip-thrust", "sets": 3, "reps": 10, "restSeconds": 90 },
+          { "exerciseId": "calf-raises", "sets": 4, "reps": 15, "restSeconds": 60 }
+        ]
+      }
+    ]
+  }
+]
