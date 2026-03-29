@@ -2,7 +2,7 @@
 // MuscuApp — Service Worker (Offline-first)
 // ═══════════════════════════════════════════════
 
-const CACHE_NAME = 'muscu-app-v2';
+const CACHE_NAME = 'muscu-app-v3';
 
 const PRECACHE_URLS = [
   './',
