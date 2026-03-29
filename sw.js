@@ -2,14 +2,21 @@
 // MuscuApp — Service Worker (Offline-first)
 // ═══════════════════════════════════════════════
 
-const CACHE_NAME = 'muscu-app-v1';
+const CACHE_NAME = 'muscu-app-v2';
 
 const PRECACHE_URLS = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/app.js',
-  '/manifest.json'
+  './',
+  './index.html',
+  './styles.css',
+  './manifest.json',
+  './js/app.js',
+  './js/training.js',
+  './js/nutrition.js',
+  './js/programs.js',
+  './js/stats.js',
+  './data/exercises.json',
+  './data/programs.json',
+  './data/foods.json'
 ];
 
 // ── Install: pre-cache app shell ────────────────
