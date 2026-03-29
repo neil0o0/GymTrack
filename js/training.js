@@ -347,7 +347,8 @@ class WorkoutSession {
         targetSets:     pe.sets,
         targetReps:     pe.reps,
         restSeconds:    pe.restSeconds || DEFAULTS.restSeconds,
-        suggestedWeight: suggestedWeights[pe.exerciseId] || 0,
+        suggestedWeight: (suggestedWeights[pe.exerciseId] || {}).weight || 0,
+        suggestedReps:   (suggestedWeights[pe.exerciseId] || {}).reps || 0,
         sets: [],   // { reps: number, weight: number, completed: boolean }
       };
     });
@@ -639,7 +640,8 @@ class TrainingModule {
 
     for (const pe of day.exercises) {
       const exInfo = this.exerciseDb.find((e) => e.id === pe.exerciseId) || {};
-      const weight = suggestedWeights[pe.exerciseId] || 0;
+      const suggestion = suggestedWeights[pe.exerciseId] || {};
+      const weight = suggestion.weight || 0;
 
       const item = el('li', { className: 'exercise-item' },
         // Illustration SVG
@@ -684,11 +686,11 @@ class TrainingModule {
    * @returns {Object} { [exerciseId]: number }
    */
   _getSuggestedWeights() {
-    const weights = {};
-    if (!this.activeProgram) return weights;
+    const suggestions = {};
+    if (!this.activeProgram) return suggestions;
 
     const day = this.activeProgram.days[this.currentDayIndex];
-    if (!day) return weights;
+    if (!day) return suggestions;
 
     const workouts = this._getWorkouts();
     const personalBests = this._getPersonalBests();
@@ -701,14 +703,21 @@ class TrainingModule {
 
       // Chercher la dernière séance contenant cet exercice
       let lastWeight = 0;
+      let lastReps = 0;
       let allRepsHit = false;
 
       for (let i = workouts.length - 1; i >= 0; i--) {
         const wEx = workouts[i].exercises?.find((e) => e.exerciseId === exId);
         if (wEx && wEx.sets && wEx.sets.length > 0) {
-          // Prendre le poids max utilisé
-          const maxW = Math.max(...wEx.sets.map((s) => s.weight || 0));
-          lastWeight = maxW;
+          // Prendre le poids max utilisé + reps associées
+          for (const s of wEx.sets) {
+            const w = s.weight || 0;
+            const r = s.reps || 0;
+            if (w > lastWeight || (w === lastWeight && r > lastReps)) {
+              lastWeight = w;
+              lastReps = r;
+            }
+          }
 
           // Vérifier si toutes les séries ont atteint les reps cibles
           allRepsHit = wEx.sets.every((s) => (s.reps || 0) >= pe.reps);
@@ -718,15 +727,21 @@ class TrainingModule {
 
       if (lastWeight > 0) {
         // Si toutes les reps étaient atteintes → on progresse
-        weights[exId] = allRepsHit ? lastWeight + increment : lastWeight;
+        suggestions[exId] = {
+          weight: allRepsHit ? lastWeight + increment : lastWeight,
+          reps: lastReps,
+        };
       } else if (personalBests[exId]) {
         // Fallback sur le PR
-        weights[exId] = personalBests[exId];
+        const pb = personalBests[exId];
+        const pbW = typeof pb === 'number' ? pb : (pb.weight || 0);
+        const pbR = typeof pb === 'number' ? 0 : (pb.reps || 0);
+        suggestions[exId] = { weight: pbW, reps: pbR };
       }
-      // sinon 0 → l'utilisateur entre manuellement
+      // sinon pas de suggestion → l'utilisateur entre manuellement
     }
 
-    return weights;
+    return suggestions;
   }
 
   /* ═══════════════════════════════════════════
@@ -882,12 +897,13 @@ class TrainingModule {
     // Inputs reps + kilos
     const inputsRow = el('div', { className: 'workout-inputs' });
 
+    const defaultReps = ex.suggestedReps > 0 ? ex.suggestedReps : ex.targetReps;
     const repsInput = el('input', {
       type: 'number',
       className: 'workout-input',
       id: 'input-reps',
       placeholder: 'Reps',
-      value: String(ex.targetReps),
+      value: String(defaultReps),
       min: '0',
       max: '999',
       inputmode: 'numeric',
@@ -1077,7 +1093,7 @@ class TrainingModule {
               ...newPRs.map((pr) =>
                 el('div', { className: 'summary-pr-item' },
                   el('span', { className: 'pr-exercise' }, pr.name),
-                  el('span', { className: 'pr-value' }, `${pr.weight} kg (+${pr.improvement} kg)`),
+                  el('span', { className: 'pr-value' }, `${pr.weight} kg × ${pr.reps} reps (+${pr.improvement} kg)`),
                 )
               )
             )
@@ -1122,15 +1138,29 @@ class TrainingModule {
     for (const ex of this.session.exercises) {
       if (ex.sets.length === 0) continue;
 
-      const maxWeight = Math.max(...ex.sets.map((s) => s.weight || 0));
-      const currentPR = prs[ex.exerciseId] || 0;
+      // Trouver le poids max + reps associées
+      let maxW = 0;
+      let repsAtMax = 0;
+      for (const s of ex.sets) {
+        const w = s.weight || 0;
+        const r = s.reps || 0;
+        if (w > maxW || (w === maxW && r > repsAtMax)) {
+          maxW = w;
+          repsAtMax = r;
+        }
+      }
 
-      if (maxWeight > currentPR && maxWeight > 0) {
+      // Rétro-compat ancien format
+      const current = prs[ex.exerciseId];
+      const currentW = typeof current === 'number' ? current : (current?.weight || 0);
+
+      if (maxW > currentW && maxW > 0) {
         newPRs.push({
           exerciseId:  ex.exerciseId,
           name:        ex.name,
-          weight:      maxWeight,
-          improvement: Math.round((maxWeight - currentPR) * 100) / 100,
+          weight:      maxW,
+          reps:        repsAtMax,
+          improvement: Math.round((maxW - currentW) * 100) / 100,
         });
       }
     }
@@ -1173,16 +1203,33 @@ class TrainingModule {
     if (this._summaryOverlay) this._summaryOverlay.style.display = 'none';
   }
 
-  /** Met à jour les records personnels */
+  /** Met à jour les records personnels (poids + reps associées) */
   _updatePersonalBests() {
     if (!this.session) return;
     const prs = this._getPersonalBests();
 
     for (const ex of this.session.exercises) {
       if (ex.sets.length === 0) continue;
-      const maxWeight = Math.max(...ex.sets.map((s) => s.weight || 0));
-      if (maxWeight > (prs[ex.exerciseId] || 0)) {
-        prs[ex.exerciseId] = maxWeight;
+
+      // Trouver le poids max et les reps associées
+      let maxW = 0;
+      let repsAtMax = 0;
+      for (const s of ex.sets) {
+        const w = s.weight || 0;
+        const r = s.reps || 0;
+        if (w > maxW || (w === maxW && r > repsAtMax)) {
+          maxW = w;
+          repsAtMax = r;
+        }
+      }
+
+      // Rétro-compat : ancien format = nombre, nouveau = { weight, reps }
+      const current = prs[ex.exerciseId];
+      const currentW = typeof current === 'number' ? current : (current?.weight || 0);
+      const currentR = typeof current === 'number' ? 0 : (current?.reps || 0);
+
+      if (maxW > currentW || (maxW === currentW && repsAtMax > currentR)) {
+        prs[ex.exerciseId] = { weight: maxW, reps: repsAtMax };
       }
     }
 
@@ -1268,7 +1315,7 @@ class TrainingModule {
           sets:            pe.sets,
           reps:            pe.reps,
           restSeconds:     pe.restSeconds || DEFAULTS.restSeconds,
-          suggestedWeight: suggestedWeights[pe.exerciseId] || 0,
+          suggestedWeight: (suggestedWeights[pe.exerciseId] || {}).weight || 0,
         };
       }),
     };
@@ -1287,7 +1334,7 @@ class TrainingModule {
 
   /**
    * Retourne les records personnels
-   * @returns {Object} { [exerciseId]: weight }
+   * @returns {Object} { [exerciseId]: { weight, reps } }
    */
   getPersonalBests() {
     return this._getPersonalBests();

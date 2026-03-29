@@ -836,7 +836,7 @@ class PanneauProgression {
           <div class="pr-icon">🏅</div>
           <div class="pr-info">
             <div class="pr-exercise">${rec.exercice}</div>
-            <div class="pr-value">${rec.poids} kg</div>
+            <div class="pr-value">${rec.poids} kg × ${rec.reps} reps</div>
           </div>
           <div class="text-sm text-secondary">${Utils.dateCourte(rec.date)}</div>
         </div>
@@ -922,19 +922,23 @@ class PanneauProgression {
 class RecordsPersonnels {
   /**
    * Calculer tous les records depuis un tableau de séances
-   * @returns {{ charges: [{exercice, poids, date}], meilleurVolume: {date, volume, programme} | null }}
+   * @returns {{ charges: [{exercice, poids, reps, date}], meilleurVolume: {date, volume, programme} | null }}
    */
   static calculer(seances) {
-    const chargesMax = {};  // { nomExo: {poids, date} }
+    const chargesMax = {};  // { nomExo: {poids, reps, date} }
     let meilleurVolume = null;
 
     for (const seance of seances) {
-      // Records de charge par exercice
+      // Records de charge par exercice (+ reps associées)
       for (const exo of (seance.exercices || [])) {
-        const maxSerie = Math.max(...(exo.series || []).map(s => s.poids || 0), 0);
-        if (maxSerie > 0) {
-          if (!chargesMax[exo.nom] || maxSerie > chargesMax[exo.nom].poids) {
-            chargesMax[exo.nom] = { poids: maxSerie, date: seance.date };
+        for (const s of (exo.series || [])) {
+          const w = s.poids || 0;
+          const r = s.reps || 0;
+          if (w > 0) {
+            const current = chargesMax[exo.nom];
+            if (!current || w > current.poids || (w === current.poids && r > current.reps)) {
+              chargesMax[exo.nom] = { poids: w, reps: r, date: seance.date };
+            }
           }
         }
       }
