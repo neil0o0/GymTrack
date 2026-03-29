@@ -1727,7 +1727,20 @@ function startWorkout(prog, dayIndex) {
   day.exercises.forEach(de => {
     const ex = findExercise(de.exerciseId);
     const sets = [];
-    for (let i = 0; i < de.sets; i++) sets.push({ reps: de.reps, kg: 0, done: false });
+    // Chercher le record max all-time pour pré-remplir
+    let bestKg = 0, bestReps = de.reps;
+    (STATE.workoutHistory || []).forEach(wh => {
+      (wh.exercises || []).forEach(wex => {
+        if ((wex.exId || wex.exerciseId) === de.exerciseId) {
+          (wex.sets || []).forEach(s => {
+            const kg = s.kg || s.weight || 0;
+            const r = s.reps || 0;
+            if (kg > bestKg || (kg === bestKg && r > bestReps)) { bestKg = kg; bestReps = r; }
+          });
+        }
+      });
+    });
+    for (let i = 0; i < de.sets; i++) sets.push({ reps: bestReps, kg: bestKg, done: false });
     activeWorkout.exercises.push({ exId: de.exerciseId, ex, sets, restSeconds: de.restSeconds, targetReps: de.reps });
   });
 
@@ -1843,14 +1856,14 @@ function finishWorkout() {
   const newRecords = [];
   
   activeWorkout.exercises.forEach(we => {
-    let exVolume = 0, exMaxWeight = 0, exMaxReps = 0, exDone = false;
+    let exVolume = 0, exMaxWeight = 0, exMaxReps = 0, repsAtMax = 0, exDone = false;
     we.sets.forEach(s => {
       if (s.done) {
         totalSets++;
         const vol = (s.kg || 0) * (s.reps || 0);
         totalVolume += vol;
         exVolume += vol;
-        if (s.kg > exMaxWeight) exMaxWeight = s.kg;
+        if (s.kg > exMaxWeight || (s.kg === exMaxWeight && (s.reps || 0) > repsAtMax)) { exMaxWeight = s.kg; repsAtMax = s.reps || 0; }
         if (s.reps > exMaxReps) exMaxReps = s.reps;
         exDone = true;
       }
@@ -1858,9 +1871,10 @@ function finishWorkout() {
     if (exDone) {
       totalExos++;
       // Check records
-      if (!STATE.records[we.exId]) STATE.records[we.exId] = {maxWeight:0,maxVolume:0,maxReps:0};
+      if (!STATE.records[we.exId]) STATE.records[we.exId] = {maxWeight:0,maxVolume:0,maxReps:0,repsAtMax:0};
       const rec = STATE.records[we.exId];
-      if (exMaxWeight > rec.maxWeight) { rec.maxWeight = exMaxWeight; newRecords.push(`${we.ex.name} : ${exMaxWeight}kg (nouveau record !)`); }
+      if (exMaxWeight > rec.maxWeight) { rec.maxWeight = exMaxWeight; rec.repsAtMax = repsAtMax; newRecords.push(`${we.ex.name} : ${exMaxWeight}kg × ${repsAtMax} reps (nouveau record !)`); }
+      else if (exMaxWeight === rec.maxWeight && repsAtMax > (rec.repsAtMax || 0)) { rec.repsAtMax = repsAtMax; }
       if (exVolume > rec.maxVolume) rec.maxVolume = exVolume;
       if (exMaxReps > rec.maxReps) rec.maxReps = exMaxReps;
     }
@@ -2496,7 +2510,7 @@ function refreshStats() {
       pbList.innerHTML = bests.slice(0, 8).map(pb => `
         <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--surface3,#333)">
           <span style="font-size:.85rem">${escHtml(pb.name)}</span>
-          <span style="color:var(--accent);font-weight:700">${pb.weight} kg</span>
+          <span style="color:var(--accent);font-weight:700">${pb.weight} kg × ${pb.reps || '?'} reps</span>
         </div>
       `).join('');
     }
@@ -2538,9 +2552,15 @@ function getPersonalBests() {
   workouts.forEach(w => {
     (w.exercises || []).forEach(ex => {
       const id = ex.exId || ex.exerciseId;
-      const maxW = Math.max(0, ...(ex.sets || []).map(s => s.kg || s.weight || 0));
-      if (maxW > 0 && (!bests[id] || maxW > bests[id].weight)) {
-        bests[id] = { exId: id, weight: maxW, date: w.date };
+      // Trouver le poids max ET les reps associées
+      let maxW = 0, repsAtMax = 0;
+      (ex.sets || []).forEach(s => {
+        const kg = s.kg || s.weight || 0;
+        const r = s.reps || 0;
+        if (kg > maxW || (kg === maxW && r > repsAtMax)) { maxW = kg; repsAtMax = r; }
+      });
+      if (maxW > 0 && (!bests[id] || maxW > bests[id].weight || (maxW === bests[id].weight && repsAtMax > bests[id].reps))) {
+        bests[id] = { exId: id, weight: maxW, reps: repsAtMax, date: w.date };
       }
     });
   });
