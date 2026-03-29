@@ -1391,6 +1391,10 @@ const FOODS = [
   {"id":"omega-3","name":"Oméga 3","category":"suppléments","calories":9,"protein":0,"fat":1,"carbs":0,"fiber":0,"serving":"1 capsule 1g","servingGrams":1,"emoji":"💊"},
   {"id":"zma","name":"ZMA","category":"suppléments","calories":0,"protein":0,"fat":0,"carbs":0,"fiber":0,"serving":"3 capsules","servingGrams":3,"emoji":"💊"},
   {"id":"vitamine-d","name":"Vitamine D","category":"suppléments","calories":0,"protein":0,"fat":0,"carbs":0,"fiber":0,"serving":"1 capsule","servingGrams":1,"emoji":"☀️"}
+
+,{"id":"rope-tricep-extension","name":"Extension triceps à la corde","muscle":"triceps","secondaryMuscles":[],"description":"Debout face à la poulie haute, poussez la corde vers le bas en écartant les extrémités en fin de mouvement.","svg":"<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect width='100' height='100' fill='#18181B'/><circle cx='50' cy='18' r='6' fill='#E8E8E8'/><line x1='50' y1='24' x2='50' y2='52' stroke='#E8E8E8' stroke-width='2.5'/><line x1='50' y1='52' x2='38' y2='75' stroke='#E8E8E8' stroke-width='2.5'/><line x1='50' y1='52' x2='62' y2='75' stroke='#E8E8E8' stroke-width='2.5'/><line x1='50' y1='34' x2='42' y2='52' stroke='#E8E8E8' stroke-width='2.5'/><line x1='50' y1='34' x2='58' y2='52' stroke='#E8E8E8' stroke-width='2.5'/><line x1='42' y1='52' x2='38' y2='58' stroke='#E8E8E8' stroke-width='2.5'/><line x1='58' y1='52' x2='62' y2='58' stroke='#E8E8E8' stroke-width='2.5'/><circle cx='42' cy='42' r='5' fill='none' stroke='#00FF87' stroke-width='1.5'/><circle cx='58' cy='42' r='5' fill='none' stroke='#00FF87' stroke-width='1.5'/><line x1='50' y1='5' x2='50' y2='14' stroke='#555' stroke-width='1.5'/></svg>"}
+,{"id":"v-bar-tricep-extension","name":"Extension triceps barre en V","muscle":"triceps","secondaryMuscles":[],"description":"Debout face à la poulie haute, poussez la barre en V vers le bas en gardant les coudes serrés au corps.","svg":"<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect width='100' height='100' fill='#18181B'/><circle cx='50' cy='18' r='6' fill='#E8E8E8'/><line x1='50' y1='24' x2='50' y2='52' stroke='#E8E8E8' stroke-width='2.5'/><line x1='50' y1='52' x2='38' y2='75' stroke='#E8E8E8' stroke-width='2.5'/><line x1='50' y1='52' x2='62' y2='75' stroke='#E8E8E8' stroke-width='2.5'/><line x1='50' y1='34' x2='44' y2='50' stroke='#E8E8E8' stroke-width='2.5'/><line x1='50' y1='34' x2='56' y2='50' stroke='#E8E8E8' stroke-width='2.5'/><line x1='44' y1='50' x2='56' y2='50' stroke='#888' stroke-width='2'/><circle cx='44' cy='42' r='5' fill='none' stroke='#00FF87' stroke-width='1.5'/><circle cx='56' cy='42' r='5' fill='none' stroke='#00FF87' stroke-width='1.5'/><line x1='50' y1='5' x2='50' y2='14' stroke='#555' stroke-width='1.5'/></svg>"}
+,{"id":"straight-bar-tricep-extension","name":"Extension triceps barre droite","muscle":"triceps","secondaryMuscles":[],"description":"Debout face à la poulie haute, poussez la barre droite vers le bas en gardant les coudes fixes au corps.","svg":"<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect width='100' height='100' fill='#18181B'/><circle cx='50' cy='18' r='6' fill='#E8E8E8'/><line x1='50' y1='24' x2='50' y2='52' stroke='#E8E8E8' stroke-width='2.5'/><line x1='50' y1='52' x2='38' y2='75' stroke='#E8E8E8' stroke-width='2.5'/><line x1='50' y1='52' x2='62' y2='75' stroke='#E8E8E8' stroke-width='2.5'/><line x1='50' y1='34' x2='43' y2='50' stroke='#E8E8E8' stroke-width='2.5'/><line x1='50' y1='34' x2='57' y2='50' stroke='#E8E8E8' stroke-width='2.5'/><line x1='38' y1='50' x2='62' y2='50' stroke='#888' stroke-width='2.5'/><circle cx='43' cy='42' r='5' fill='none' stroke='#00FF87' stroke-width='1.5'/><circle cx='57' cy='42' r='5' fill='none' stroke='#00FF87' stroke-width='1.5'/><line x1='50' y1='5' x2='50' y2='14' stroke='#555' stroke-width='1.5'/></svg>"}
 ];
 
 const PROGRAMS = [
@@ -1620,13 +1624,18 @@ function renderProgramsList() {
     const icon = PROGRAM_ICONS[prog.id] || '📋';
     const level = LEVEL_LABELS[prog.level] || prog.level;
     const isActive = getProfile().programId === prog.id;
+    const isCustom = prog.id.startsWith('custom-');
     html += `<div class="card program-card ${isActive ? 'card-glow' : ''}" onclick="selectProgram('${prog.id}')">
       <div class="p-header">
         <div class="p-icon">${icon}</div>
-        <div>
+        <div style="flex:1">
           <div class="p-name">${escHtml(prog.name)} ${isActive ? '<span style="color:var(--accent);font-size:.75rem">✓ Actif</span>' : ''}</div>
           <div class="p-meta">${level} · ${prog.daysPerWeek}j/sem</div>
         </div>
+        ${isCustom ? `<div style="display:flex;gap:8px" onclick="event.stopPropagation()">
+          <button onclick="editCustomProgram('${prog.id}')" style="background:var(--surface3);border:none;border-radius:8px;padding:6px 10px;color:var(--text);cursor:pointer;font-size:.8rem">✏️</button>
+          <button onclick="deleteCustomProgram('${prog.id}')" style="background:var(--surface3);border:none;border-radius:8px;padding:6px 10px;color:var(--danger);cursor:pointer;font-size:.8rem">🗑</button>
+        </div>` : ''}
       </div>
       <div class="p-desc">${escHtml(prog.description)}</div>
       <div class="program-days">${prog.days.map(d => '<span class="program-day-chip">'+escHtml(d.name)+'</span>').join('')}</div>
@@ -2044,7 +2053,19 @@ function saveCustomProgram() {
       }))
     }))
   };
-  STATE.customPrograms.push(prog);
+  if (window._editingProgId) {
+    const editIdx = STATE.customPrograms.findIndex(p => p.id === window._editingProgId);
+    if (editIdx >= 0) {
+      prog.id = window._editingProgId;
+      STATE.customPrograms[editIdx] = prog;
+    } else {
+      STATE.customPrograms.push(prog);
+    }
+    window._editingProgId = null;
+    window._editingProgIdx = null;
+  } else {
+    STATE.customPrograms.push(prog);
+  }
   saveState();
   // Reset builder
   cbDays = [];
@@ -2915,6 +2936,48 @@ document.addEventListener('DOMContentLoaded', () => {
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(() => {});
 }
+
+function editCustomProgram(progId) {
+  const progIdx = STATE.customPrograms.findIndex(p => p.id === progId);
+  if (progIdx < 0) { showToast('Programme introuvable', 'error'); return; }
+  const prog = STATE.customPrograms[progIdx];
+  
+  // Load program into the custom builder
+  switchTrainingTab('custom');
+  
+  // Set the program name
+  const nameInput = document.getElementById('cbProgramName');
+  if (nameInput) nameInput.value = prog.name;
+  
+  // Load days into cbDays
+  cbDays = prog.days.map(d => ({
+    name: d.name,
+    exercises: d.exercises.map(e => ({...e}))
+  }));
+  
+  // Store the editing program id
+  window._editingProgId = progId;
+  window._editingProgIdx = progIdx;
+  
+  cbRenderDays();
+  showToast('Programme chargé — modifie et sauvegarde !');
+}
+
+function deleteCustomProgram(progId) {
+  if (!confirm('Supprimer ce programme ?')) return;
+  const idx = STATE.customPrograms.findIndex(p => p.id === progId);
+  if (idx >= 0) {
+    STATE.customPrograms.splice(idx, 1);
+    // If it was the active program, deactivate
+    if (getProfile().programId === progId) {
+      getProfile().programId = null;
+    }
+    saveState();
+    renderProgramsList();
+    showToast('Programme supprimé');
+  }
+}
+
 </script>
 </body>
 </html>
